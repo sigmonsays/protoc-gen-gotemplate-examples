@@ -1,0 +1,8 @@
+
+   
+   
+      // type PingReply
+      //   message name=Code
+      //     enum OK 0
+      //       do something with enum type...
+

@@ -1,0 +1,26 @@
+
+syntax = "proto3";
+
+package ex1;
+
+service MyApi {
+  rpc Ping (PingRequest) returns (PingReply) {}
+}
+
+enum Color  {
+   Red = 0;
+   Green = 1;
+   Blue = 2;
+}
+
+message PingRequest  {
+   Color color = 1;
+}
+
+message PingReply {
+    enum Code {
+        OK = 0;
+    }
+    Code code = 1;
+    string message = 2;
+}

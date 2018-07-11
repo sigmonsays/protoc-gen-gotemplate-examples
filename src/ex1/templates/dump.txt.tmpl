@@ -1,0 +1,19 @@
+
+{{- range .File.MessageType }}
+   {{ $t := . }}
+   {{- if .EnumType }}
+      // type {{ .Name }}
+      {{- $e := .EnumType }}
+      {{- range $e }}
+      {{- $m := .}}
+      //   message name={{ .Name }}
+            {{- range $i, $v := .Value }}
+      //     enum {{ $v.Name }} {{ $v.Number }}
+      //       do something with enum type...
+            {{- end }}
+
+      {{- end }}
+
+   {{- end }}
+{{- end }}
+
